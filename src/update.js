@@ -17,3 +17,5 @@ Update.prototype.exec = function () {
 	}
 	
 }
+
+module.exports = Update;
