@@ -5,6 +5,8 @@ var spawn = require('child_process').spawn,
 
 var Dotfiles = function (options, cwd, env) {
 
+	if (options.length <= 0) this.help();
+
 	this.opts = {
 		args: options,
 		fun: options[0].toLowerCase(),
