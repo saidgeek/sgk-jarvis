@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var argv = process.argv,
+		path = require('path'),
+		Dotfiles = require('../src/dotfiles'),
+		Update = require('../src/update');
+
+argv.splice(0, 2);
+
+if (argv.length > 0) {
+
+	switch (argv[0]) {
+		case 'dotfiles':
+			// llamada a dotfiles
+			argv.splice(0,1)
+			new Dotfiles(argv, path.join(__dirname, '..'), process.env).exec();
+			break;
+		case 'update':
+			// update del pkg
+			new Update().exec()
+			break;
+		default:
+			// llamada al help por defecto
+			console.log('sgk help!');
+			break;
+	}
+
+} else {
+	console.log('sgk help!');
+	return false;
+};

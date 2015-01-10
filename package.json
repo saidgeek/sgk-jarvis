@@ -1,0 +1,53 @@
+{
+  "name": "sgk-jarvis",
+  "version": "0.0.0",
+  "description": "the wizard to my terminal.",
+  "keywords": [
+    "cli",
+    "dotfiles",
+    "brew",
+    "brew-cask",
+    "Grunt",
+    "javascript"
+  ],
+  "author": {
+    "name": "Andrés Espinace (@saidGeeK)",
+    "email": "atarix.010101@gmail.com",
+    "twitter": "saidGeeK"
+  },
+  "license": "GPL",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:saidgeek/sgk-jarvis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saidgeek/sgk-jarvis/issues"
+  },
+  "main": "bin/jarvis",
+  "bin": {
+    "jarvis": "bin/jarvis"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=0.10.35",
+    "npm": ">=1.4.28"
+  },
+  "dependencies": {
+    "colors": "^1.0.3",
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.16",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-git": "^0.3.2",
+    "grunt-mkdir": "^0.1.2",
+    "grunt-prompt": "^1.3.0",
+    "grunt-shell": "^1.1.1",
+    "grunt-symlink": "^0.4.0",
+    "grunt-template": "^0.2.3",
+    "update-notifier": "^0.2.2",
+    "userhome": "^1.0.0",
+    "which": "^1.0.8"
+  },
+  "peerDependencies": {
+    "grunt-cli": "^0.1.13"
+  }
+}

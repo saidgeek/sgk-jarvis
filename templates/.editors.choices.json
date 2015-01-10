@@ -1,0 +1,10 @@
+[	
+	{
+      "name": "Sublime Text",
+      "value": "subl -n"
+  },
+  {
+      "name": "Vim",
+      "value": "vi"
+  }
+]
