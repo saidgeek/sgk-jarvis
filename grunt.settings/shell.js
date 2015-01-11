@@ -74,7 +74,7 @@ module.exports = {
 	theme_alfred: {
 		command: [
 		'[ -d "/Applications/Alfred\ 2.app" ]',
-		'open <%= config.themes.path_alfred_solarized %>/Solarized\ \(Dark\).alfredtheme || echo "Alfred App is not installed"'
+		'open <%= config.themes.path_alfred_solarized %>/"Solarized (Dark).alfredtheme" || echo "Alfred App is not installed"'
 		].join('&&')
 	},
 
