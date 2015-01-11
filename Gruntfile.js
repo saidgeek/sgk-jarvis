@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 		/**
 		 * Exec shells
 		 */
-		shell: shell_settings
+		exec: shell_settings
 
 	});
 
@@ -180,7 +180,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-template');
 	grunt.loadNpmTasks('grunt-git');
 	grunt.loadNpmTasks('grunt-symlink');
-	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-exec');
 	grunt.loadNpmTasks('grunt-mkdir');
 
 	grunt.registerTask('test', ['prompt', 'shell:install']);
