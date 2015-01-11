@@ -71,18 +71,11 @@ module.exports = {
 		].join('&&')
 	},
 
-	theme_alfred: {
-		command: [
-		'[ -d "/Applications/Alfred\ 2.app" ]',
-		'open <%= config.themes.path_alfred_solarized %>/"Solarized (Dark).alfredtheme" || echo "Alfred App is not installed"'
-		].join('&&')
-	},
-
 	theme_terminal: {
-		command: 'open <%= config.themes.path_solarized %>/osx-terminal.app-colors-solarized/"Solarized Dark ansi".terminal'
+		command: 'open "<%= config.themes.path_solarized %>/osx-terminal.app-colors-solarized/Solarized Dark ansi.terminal"'
 	},
 	theme_iterm: {
-		command: 'open <%= config.themes.path_solarized %>/iterm2-colors-solarized/"Solarized Dark".itermcolors'
+		command: 'open "<%= config.themes.path_solarized %>/iterm2-colors-solarized/Solarized Dark.itermcolors"'
 	}
 
 

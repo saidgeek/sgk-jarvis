@@ -10,7 +10,7 @@ var path = require('path'),
 		template_settings = require('./grunt.settings/template'),
 		git_clone_settings = require('./grunt.settings/git.clone'),
 		symlink_settings = require('./grunt.settings/symlink'),
-		shell_settings = require('./grunt.settings/shell'),
+		exec_settings = require('./grunt.settings/exec'),
 
 		PATH_DOTFILES = userhome('.dotfiles');
 
@@ -63,9 +63,11 @@ module.exports = function(grunt) {
 			},
 			sublime_text: {
 				path_sublime_dotfiles: '<%= path_dotfiles %>/.sublime-dotfiles',
-				path_sublime_install_packages: '<%= path_dotfiles %>/.sublime-dotfiles/Install Packages',
+				path_sublime_install_packages: '<%= path_dotfiles %>/.sublime-dotfiles/Installed Packages',
 				path_sublime_packages: '<%= path_dotfiles %>/.sublime-dotfiles/Packages',
-				path_sublime_system: '~/Library/Application Support/Sublime Text 3'
+				path_sublime_system: userhome('Library/Application Support/Sublime Text 3/Installed Packages'),
+				path_sublime_install_packages_system: userhome('Library/Application Support/Sublime Text 3/Installed Packages'),
+				path_sublime_packages_system: userhome('Library/Application Support/Sublime Text 3/Packages')
 			}
 		},
 
@@ -112,7 +114,7 @@ module.exports = function(grunt) {
 		/**
 		 * Exec shells
 		 */
-		exec: shell_settings
+		exec: exec_settings
 
 	});
 
@@ -154,7 +156,6 @@ module.exports = function(grunt) {
 		var apps = grunt.config.get('config').apps;
 		var tasks = [];
 
-		// tasks.push('exec:brew');
 		tasks.push('exec:brew_cask');
 
 		for (var i = 0; i < apps.length; i++) {
@@ -166,7 +167,6 @@ module.exports = function(grunt) {
 		};
 
 		tasks.push('exec:brew_cask_cleanup');
-		tasks.push('exec:theme_alfred');
 		tasks.push('exec:theme_terminal');
 		tasks.push('exec:theme_iterm');
 		tasks.push('exec:zsh');
