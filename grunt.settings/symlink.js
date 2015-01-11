@@ -3,7 +3,7 @@
 module.exports = {
 
 	gitconfig: {
-		relariveSrc: '<%= config.git.path_gitconfig %>',
+		relativeSrc: '<%= config.git.path_gitconfig %>',
 		dest: '<%= config.git.path_gitconfig_system %>'
 	},
 	gitignore: {
