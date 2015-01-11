@@ -93,8 +93,8 @@ module.exports = function(grunt) {
 			all: {
 				options: {
 					create: [
-						'~/dev',
-						'~/Library/Application Support/Sublime Text 3'
+						userhome('dev'),
+						userhome('Library/Application Support/Sublime Text 3')
 					]
 				}
 			}
