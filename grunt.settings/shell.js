@@ -11,7 +11,7 @@ module.exports = {
 		command: 'source <%= config.osx.path_osx_system %>'
 	},
 	zsh: {
-		command: 'chsh - /bin/zsh'
+		command: 'chsh -s /bin/zsh'
 	},
 
 	brew: {
