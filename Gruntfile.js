@@ -154,7 +154,6 @@ module.exports = function(grunt) {
 		var apps = grunt.config.get('config').apps;
 		var tasks = [];
 
-		tasks.push('shell:osx');
 		tasks.push('shell:zsh');
 		tasks.push('shell:brew');
 		tasks.push('shell:brew_cask');
@@ -163,9 +162,10 @@ module.exports = function(grunt) {
 			tasks.push('shell:cask_' + apps[i].replace('-', '_'));
 		};
 
-		tasks.push('shell:brew_cask_cleanup')
-		tasks.push('shell:theme_alfred')
-		tasks.push('shell:theme_terminal')
+		tasks.push('shell:brew_cask_cleanup');
+		tasks.push('shell:theme_alfred');
+		tasks.push('shell:theme_terminal');
+		tasks.push('shell:osx');
 
 		grunt.task.run(tasks);
 
