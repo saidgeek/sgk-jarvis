@@ -162,7 +162,7 @@ module.exports = function(grunt) {
 			if (apps[i] !== 'mongodb') {
 				tasks.push('exec:cask_' + apps[i].replace('-', '_'));
 			} else {
-				tasks.push('exec:' + apps[i]);
+				tasks.push('exec:brew_' + apps[i]);
 			}
 		};
 
