@@ -11,7 +11,10 @@ module.exports = {
 		command: 'source <%= config.osx.path_osx_system %>'
 	},
 	zsh: {
-		command: 'chsh -s /bin/zsh'
+		command: [
+			'chsh -s /bin/zsh',
+			'source <%= config.zsh.path_zshrc_system %>'
+		].join('&&')
 	},
 
 	brew: {
@@ -71,7 +74,7 @@ module.exports = {
 	theme_alfred: {
 		command: [
 		'[ -d "/Applications/Alfred\ 2.app" ]',
-		'open <%= config.themes.path_alfred_solarized %>/Solarized\ (Dark).alfredtheme || echo "Alfred App is not installed"'
+		'open <%= config.themes.path_alfred_solarized %>/Solarized\ \(Dark\).alfredtheme || echo "Alfred App is not installed"'
 		].join('&&')
 	},
 

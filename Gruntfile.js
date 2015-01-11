@@ -154,7 +154,6 @@ module.exports = function(grunt) {
 		var apps = grunt.config.get('config').apps;
 		var tasks = [];
 
-		tasks.push('exec:zsh');
 		// tasks.push('exec:brew');
 		tasks.push('exec:brew_cask');
 
@@ -169,6 +168,8 @@ module.exports = function(grunt) {
 		tasks.push('exec:brew_cask_cleanup');
 		tasks.push('exec:theme_alfred');
 		tasks.push('exec:theme_terminal');
+		tasks.push('exec:theme_iterm');
+		tasks.push('exec:zsh');
 		tasks.push('exec:osx');
 
 		grunt.task.run(tasks);
