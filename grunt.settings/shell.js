@@ -79,10 +79,10 @@ module.exports = {
 	},
 
 	theme_terminal: {
-		command: 'open <%= config.themes.path_solarized %>/.solarized_theme/osx-terminal.app-colors-solarized/Solarized\ Dark\ ansi.terminal'
+		command: 'open <%= config.themes.path_solarized %>/osx-terminal.app-colors-solarized/"Solarized Dark ansi".terminal'
 	},
 	theme_iterm: {
-		command: 'open <%= config.themes.path_solarized %>/.solarized_theme/iterm2-colors-solarized/Solarized\ Dark.itermcolors'
+		command: 'open <%= config.themes.path_solarized %>/iterm2-colors-solarized/"Solarized Dark".itermcolors'
 	}
 
 
