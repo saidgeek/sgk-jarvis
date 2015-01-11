@@ -155,7 +155,7 @@ module.exports = function(grunt) {
 		var tasks = [];
 
 		tasks.push('exec:zsh');
-		tasks.push('exec:brew');
+		// tasks.push('exec:brew');
 		tasks.push('exec:brew_cask');
 
 		for (var i = 0; i < apps.length; i++) {
