@@ -31,31 +31,34 @@ module.exports = {
 	},
 
 	cask_alfred: {
-		command: 'brew cask install alfred'
+		command: 'brew cask --appdir=/Applications alfred'
 	},
 	cask_google_chrome: {
-		command: 'brew cask install google-chrome'
+		command: 'brew cask --appdir=/Applications google-chrome'
 	},
 	cask_sublime_text3: {
-		command: 'brew cask install sublime-text3'
+		command: 'brew cask --appdir=/Applications sublime-text3'
 	},
 	cask_totalterminal: {
-		command: 'brew cask install totalterminal'
+		command: 'brew cask --appdir=/Applications totalterminal'
 	},
 	cask_github: {
-		command: 'brew cask install github'
+		command: 'brew cask --appdir=/Applications github'
 	},
 	cask_mou: {
-		command: 'brew cask install mou'
+		command: 'brew cask --appdir=/Applications mou'
 	},
 	cask_mindnode_pro: {
-		command: 'brew cask install mindnode-pro'
+		command: 'brew cask --appdir=/Applications mindnode-pro'
 	},
 	cask_caffeine: {
-		command: 'brew cask install caffeine'
+		command: 'brew cask --appdir=/Applications caffeine'
 	},
 	cask_robomongo: {
-		command: 'brew cask install robomongo'
+		command: 'brew cask --appdir=/Applications robomongo'
+	},
+	cask_iterm2: {
+		command: 'brew cask --appdir=/Applications iterm2'
 	},
 
 	brew_cask_cleanup: {

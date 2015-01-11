@@ -11,6 +11,11 @@
   },
   {
       "checked": false,
+      "name": "Iterm2",
+      "value": "iterm2"
+  },
+  {
+      "checked": false,
       "name": "Sublime text 3",
       "value": "sublime-text3"
   },

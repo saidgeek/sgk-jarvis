@@ -160,7 +160,7 @@ module.exports = function(grunt) {
 		tasks.push('shell:brew_cask');
 
 		for (var i = 0; i < apps.length; i++) {
-			tasks.push('shell:' + apps[i].replace('-', '_'));
+			tasks.push('shell:cask_' + apps[i].replace('-', '_'));
 		};
 
 		tasks.push('shell:brew_cask_cleanup')
