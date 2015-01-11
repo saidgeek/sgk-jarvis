@@ -70,13 +70,16 @@ module.exports = {
 
 	theme_alfred: {
 		command: [
-		'[ -d "/Applications/Alfred 2.app" ]',
-		'open <%= config.themes.path_alfred_solarized %>/Solarized (Dark).alfredtheme || echo "Alfred App is not installed"'
+		'[ -d "/Applications/Alfred\ 2.app" ]',
+		'open <%= config.themes.path_alfred_solarized %>/Solarized\ (Dark).alfredtheme || echo "Alfred App is not installed"'
 		].join('&&')
 	},
 
 	theme_terminal: {
-		command: 'open <%= config.themes.path_solarized %>/.solarized_theme/osx-terminal.app-colors-solarized/Solarized Dark ansi.terminal'
+		command: 'open <%= config.themes.path_solarized %>/.solarized_theme/osx-terminal.app-colors-solarized/Solarized\ Dark\ ansi.terminal'
+	},
+	theme_iterm: {
+		command: 'open <%= config.themes.path_solarized %>/.solarized_theme/iterm2-colors-solarized/Solarized\ Dark.itermcolors'
 	}
 
 
