@@ -27,8 +27,10 @@ module.exports = {
 		}
 	},
 	sublime_dotfiles: {
-		directory: '<%= config.sublime_text.path_sublime_dotfiles %>',
-		repository: 'https://github.com/saidgeek/sublime-dotfiles.git'
+		options: {
+			directory: '<%= config.sublime_text.path_sublime_dotfiles %>',
+			repository: 'https://github.com/saidgeek/sublime-dotfiles.git'
+		}
 	}
 
 };
