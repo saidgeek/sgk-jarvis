@@ -1,33 +1,38 @@
-#!/usr/bin/env node
+#!/usr/bin/env coffee
 
-'use strict';
+'use strict'
 
-var argv = process.argv,
-		path = require('path'),
-		Dotfiles = require('../src/dotfiles'),
-		Update = require('../src/update');
+path = require 'path'
+program = require 'commander'
+Dotfiles = require '../src/dotfiles'
+spawn = require('child_process').spawn
+exec = require('child_process').exec
+which = require('which').sync
+pkg = require '../package'
 
-argv.splice(0, 2);
+console.log path.resolve(process.cwd())
 
-if (argv.length > 0) {
+program
+	.version "jarvis - v#{pkg.version}"
 
-	switch (argv[0]) {
-		case 'dotfiles':
-			// llamada a dotfiles
-			argv.splice(0,1)
-			new Dotfiles(argv, path.join(__dirname, '..'), process.env).exec();
-			break;
-		case 'update':
-			// update del pkg
-			new Update().exec()
-			break;
-		default:
-			// llamada al help por defecto
-			console.log('sgk help!');
-			break;
-	}
+program
+	.command 'dotfiles'
+	.description 'Dotfiles options'
+	.option '-i, --install', 'Install dotfiles'
+	.option '-d, --dir <dir>', 'Dirname to dotfiles folder'
+	.action (options) ->
+		args = []
+		console.log options.install
+		if options.install
+			args.push 'setup'	if options.install and not options.dir
+			args.push "setup:#{ options.dir }" if options.dir
+			spawn which('grunt'), args, {
+				cwd: path.join(__dirname, '..')
+				env: process.env
+				stdio: 'inherit'
+			}
+		else
+			program.help()
 
-} else {
-	console.log('sgk help!');
-	return false;
-};
+
+program.parse process.argv
